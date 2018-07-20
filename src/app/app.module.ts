@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SliderComponent } from './main/slider/slider.component';
 import { CategoryComponent } from './main/category/category.component';
 import { ListComponent } from './main/list/list.component';
+import { CategoryFilterPipe } from './category-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ListComponent } from './main/list/list.component';
     FooterComponent,
     SliderComponent,
     CategoryComponent,
-    ListComponent
+    ListComponent,
+    CategoryFilterPipe
   ],
   imports: [
     BrowserModule
