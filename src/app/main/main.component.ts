@@ -18,7 +18,7 @@ export class MainComponent implements OnInit {
   }
 
   clickedCategoryName(name: string) {
-    console.log('[currentCategoryName]', name)
+    console.log('[currentCategoryName]', name);
     this.currentCategoryName = name;
   }
 

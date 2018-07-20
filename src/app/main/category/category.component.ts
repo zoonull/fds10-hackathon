@@ -4,7 +4,7 @@ import { CategoryFilter } from '../../category-filter.interface'
 @Component({
   selector: 'app-category',
   template: `
-    <ul class="nav nav-xs nav-pills">
+    <ul class="nav">
       <li *ngFor="let categoryList of categoryContentList" [class.active]="curCateList===categoryList.category" (click)="curCateList=categoryList.category && clickedCategory.emit(categoryList.category)">
         <div class="contents-area">
           <p class="image-area">
@@ -25,16 +25,16 @@ import { CategoryFilter } from '../../category-filter.interface'
       margin: 5px;
     }
     /* 컨텐츠 영역의 패딩과 정렬 설정 */
-    .nav.nav-xs > li > div {
+    .nav > li > div {
       padding: 4px 10px;
       text-align: center;
     }
     /* 이미지 곡률 지정 */
-    .nav.nav-xs > li > div > p > img {
+    .nav > li > div > p > img {
       border-radius: 50%;
     }
     /* 카테고리 선택시 영역 색상 변경 및 폰트 색상 변경 */
-    .nav-pills > li.active > div {
+    .nav > li.active > div {
       color: hsla(89, 43%, 51%, 0.3) !important;
       background-color: grey;
     }
@@ -44,7 +44,7 @@ import { CategoryFilter } from '../../category-filter.interface'
       cursor: pointer;
     }
     /* 카테고리 선택시 이미지 테두리 속성 */
-    .nav-pills > li.active > div > p > img {
+    .nav > li.active > div > p > img {
       border-style: solid;
       border-width: 0.5em;
       border-color: hsla(89, 43%, 51%, 0.3);
